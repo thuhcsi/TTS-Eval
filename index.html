@@ -57,11 +57,9 @@
                 <div class="select_wrapper">
                     <template v-for="audio in cur_exp.eps_list[cur_exp.cur_ep_id-1].ep">
                         <div class="selector"><select class="btn" v-model="audio.eval">
-                            <option value="bad">bad</option>
-                            <option value="poor">poor</option>
-                            <option value="fair">fair</option>
-                            <option value="good">good</option>
-                            <option value="excellent">excellent</option></select>
+                            <template v-for="score in 5">
+                                <option :value="score">{{ score.toString() }}</option>
+                            </template></select>
                         </div>
                     </template>
                 </div>
