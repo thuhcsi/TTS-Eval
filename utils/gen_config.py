@@ -97,7 +97,7 @@ def buildSingleConfig(path):
     if exp_type == "MOS":
         for ep_dict in exp_config["eps_list"]:
             for audio in ep_dict["ep"]:
-                audio["eval"] = "fair"
+                audio["eval"] = 3
     elif exp_type == "ABX":
         for ep_dict in exp_config["eps_list"]:
             ep_dict["sel"] = "NP"
